@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuing Education at Hemans Nutrition Clinic</title>
+    <link rel="stylesheet" href="styles/continuing education.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Continuing Education Registration</h1>
+        <form id="registrationForm" onsubmit="handleRegistration(event)">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="Nutrition Basics">Nutrition Basics</option>
+                <option value="Healthy Meal Planning">Healthy Meal Planning</option>
+                <option value="Weight Management Strategies">Weight Management Strategies</option>
+                <option value="Mindful Eating Practices">Mindful Eating Practices</option>
+                <option value="Sports Nutrition">Sports Nutrition</option>
+                <option value="Diebetics management">Diebetics management</option>
+                <option value="Weight management">Weight management</option>
+            </select>
+
+            <label for="comments">Comments (optional):</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+            
+            <button type="submit">Register</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script src="scripts/continuing education.js"></script>
+</body>
+</html>

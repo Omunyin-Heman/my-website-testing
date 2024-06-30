@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Events at Hemans Nutrition and Wellness Clinic</title>
+    <link rel="stylesheet" href="styles/community events.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Community Events at Hemans Nutrition and Wellness Clinic</h1>
+        </div>
+    </header>
+
+    <section id="upcoming-events">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="event">
+                <h3>Healthy Cooking Workshop</h3>
+                <p><strong>Date:</strong> July 15, 2024</p>
+                <p><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
+                <p><strong>Location:</strong> Hemans Clinic Kitchen</p>
+                <p><strong>Description:</strong> Join us for a hands-on workshop where our nutrition experts will teach you delicious and nutritious recipes.</p>
+                <button onclick="registerForEvent('Healthy Cooking Workshop')">Register</button>
+            </div>
+            <div class="event">
+                <h3>Mindfulness Meditation Session</h3>
+                <p><strong>Date:</strong> August 5, 2024</p>
+                <p><strong>Time:</strong> 6:00 PM - 7:00 PM</p>
+                <p><strong>Location:</strong> Clinic Meditation Room</p>
+                <p><strong>Description:</strong> Relax and rejuvenate with our guided mindfulness meditation session led by certified therapists.</p>
+                <button onclick="registerForEvent('Mindfulness Meditation Session')">Register</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration">
+        <div class="container">
+            <h2>Registration</h2>
+            <p>To register for an event or inquire about upcoming community events, please fill out the form below:</p>
+            <form id="registrationForm" onsubmit="submitRegistration(event)">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="event">Event:</label>
+                <select id="event" name="event" required>
+                    <option value="" disabled selected>Select an event</option>
+                    <option value="Healthy Cooking Workshop">Healthy Cooking Workshop</option>
+                    <option value="Mindfulness Meditation Session">Mindfulness Meditation Session</option>
+                </select>
+
+                <button type="submit">Submit Registration</button>
+            </form>
+            <p id="registrationStatus"></p>
+        </div>
+    </section>
+
+    <script src="scripts/community events.js"></script>
+</body>
+</html>

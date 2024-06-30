@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nutrient Requirements Calculator</title>
+        <link rel="stylesheet" href="styles/nutrient requirements calc female.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Nutrient Requirements Calculator female at Hemans Nutrition and Wellness Clinic</h1>
+            <form id="nutrient-form">
+                <label for="age">Age (years):</label>
+                <input type="number" id="age" name="age" min="1" required>
+                
+                <label for="activity-level">Activity Level:</label>
+                <select id="activity-level" name="activity-level">
+                    <option value="sedentary">Sedentary (little to no exercise)</option>
+                    <option value="lightly-active">Lightly active (light exercise/sports 1-3 days/week)</option>
+                    <option value="moderately-active">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+                    <option value="very-active">Very active (hard exercise/sports 6-7 days a week)</option>
+                    <option value="super-active">Super active (very hard exercise/sports, physical job, or training twice a day)</option>
+                </select>
+                
+                <button type="button" onclick="calculateNutrientRequirements()">Calculate</button>
+            </form>
+            
+            <div id="results">
+                <!-- Results will be displayed here -->
+            </div>
+            <footer>
+                <p>&copy; 2024@Hemans Nutrition and Wellness clinic. All rights reserved.</p>
+            </footer>
+        </div>
+    
+        <script src="scripts/nutrient requirements calc females.js"></script>
+    </body>
+    </html>

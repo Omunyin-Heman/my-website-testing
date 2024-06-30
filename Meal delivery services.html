@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Delivery services</title>
+    <link rel="stylesheet" href="styles/meal delivery services.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Meal Delivery Services at Hemans Nutrition and Wellness Clinic</h1>
+        <form id="mealOrderForm" onsubmit="submitOrder(event)">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="mealType">Select Meal Type:</label>
+            <select id="mealType" name="mealType" required>
+                <option value="" disabled selected>Select a meal type</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Snacks">Snacks</option>
+            </select>
+
+            <label for="deliveryAddress">Delivery Address:</label>
+            <textarea id="deliveryAddress" name="deliveryAddress" rows="4" required></textarea>
+            
+            <button type="submit">Submit Order</button>
+        </form>
+        <p id="orderStatus"></p>
+    </div>
+
+    <script src="scripts/meal delivery services.js"></script>
+</body>
+</html>

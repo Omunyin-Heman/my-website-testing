@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastrointestinal Diseases - Hemans Nutrition and Wellness Clinic</title>
+    <link rel="stylesheet" href="styles/Gastrointestinal Diseases.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gastrointestinal Diseases</h1>
+            <nav>
+                <ul>
+                    <li><a href="#gerd">GERD</a></li>
+                    <li><a href="#pud">PUD</a></li>
+                    <li><a href="#ibd">IBD</a></li>
+                    <!-- Add links to other disease sections -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="accordion">
+            <button class="accordion-btn">Causes</button>
+            <div class="panel">
+                <p>Information about causes...</p>
+            </div>
+            
+            <button class="accordion-btn">Effects on Patients</button>
+            <div class="panel">
+                <p>Symptoms and impacts...</p>
+            </div>
+            
+            <!-- Repeat for Nutritional Management and Treatment sections -->
+        </div>
+        
+        <script>
+            var acc = document.getElementsByClassName("accordion-btn");
+            for (var i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+        <form id="bmiForm">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+            <br>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+            <br>
+            <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+            <br>
+            <label for="result">Your BMI:</label>
+            <input type="text" id="result" name="result" readonly>
+        </form>
+        
+        <script>
+            function calculateBMI() {
+                var weight = document.getElementById("weight").value;
+                var height = document.getElementById("height").value / 100; // convert height to meters
+                var bmi = weight / (height * height);
+                document.getElementById("result").value = bmi.toFixed(2); // display BMI with two decimal places
+            }
+        </script>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // prevent default form submission
+                // Handle form submission using AJAX or backend processing
+                alert("Form submitted successfully!"); // Example alert, replace with actual form processing logic
+                this.reset(); // Clear form fields after submission
+            });
+        </script>
+        <div class="container">
+            <section id="gerd">
+                <h2>GERD (Gastroesophageal Reflux Disease)</h2>
+                <div class="accordion">
+                    <button class="accordion-btn">Causes</button>
+                    <div class="panel">
+                        <p>Weak lower esophageal sphincter, hiatal hernia, obesity, pregnancy.</p>
+                    </div>
+                    
+                    <button class="accordion-btn">Effects on Patients</button>
+                    <div class="panel">
+                        <p>Heartburn, regurgitation, chest pain, chronic cough.</p>
+                    </div>
+                    
+                    <button class="accordion-btn">Nutritional Management</button>
+                    <div class="panel">
+                        <p>Avoid trigger foods (spicy, caffeine), smaller meals, elevate head during sleep.</p>
+                    </div>
+                    
+                    <button class="accordion-btn">Treatment and Medications</button>
+                    <div class="panel">
+                        <p>Proton pump inhibitors (PPIs) like omeprazole, H2 blockers like ranitidine, antacids.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pud">
+                <h2>Peptic Ulcer Disease (PUD)</h2>
+                <div class="accordion">
+                    <button class="accordion-btn">Causes</button>
+                    <div class="panel">
+                        <p>H. pylori infection, NSAID use, excessive acid production.</p>
+                    </div>
+                    
+                    <button class="accordion-btn">Effects on Patients</button>
+                    <div class="panel">
+                        <p>Abdominal pain, nausea, vomiting, gastrointestinal bleeding.</p>
+                    </div>
+                    
+                    <button class="accordion-btn">Nutritional Management</button>
+                    <div class="panel">
+                        <p>Helicobacter pylori eradication therapy, avoid NSAIDs, eat regular meals.</p>
+                    </div>
+                    
+                    <button class="accordion-btn">Treatment and Medications</button>
+                    <div class="panel">
+                        <p>PPIs, antibiotics (for H. pylori), cytoprotective agents (sucralfate).</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ibd">
+                <h2>Inflammatory Bowel Disease (IBD)</h2>
+                <div class="accordion">
+                    <button class="accordion-btn">Causes</button>
+                    <div class="panel">
+                        <p>Genetic predisposition, autoimmune factors, environmental triggers.</p>
+                    </div>
+                    
+                    <button class="accordion-btn">Effects on Patients</button>
+                    <div class="panel">
+                        <p>Diarrhea, abdominal pain, weight loss, fatigue, malnutrition.</p>
+                    </div>
+                    
+                    <button class="accordion-btn">Nutritional Management</button>
+                    <div class="panel">
+                        <p>Maintain adequate nutrition, avoid trigger foods, consider specific carbohydrate diet (SCD).</p>
+                    </div>
+                    
+                    <button class="accordion-btn">Treatment and Medications</button>
+                    <div class="panel">
+                        <p>Aminosalicylates, corticosteroids (for acute flare-ups), immunomodulators, biologic therapies.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Add sections for other diseases -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Hemans Nutrition and Wellness Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/Gastrointestinal Diseases.js"></script>
+</body>
+</html>

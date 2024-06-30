@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient Counter</title>
+    <link rel="stylesheet" href="styles/Nutrient counter.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nutrient Counter</h1>
+        <div class="input-section">
+            <label for="food-name">Food Name:</label>
+            <input type="text" id="food-name" placeholder="Enter food name">
+            <label for="calories">Calories:</label>
+            <input type="number" id="calories" placeholder="Enter calories">
+            <label for="protein">Protein (g):</label>
+            <input type="number" id="protein" placeholder="Enter protein">
+            <label for="carbs">Carbohydrates (g):</label>
+            <input type="number" id="carbs" placeholder="Enter carbohydrates">
+            <label for="fat">Fat (g):</label>
+            <input type="number" id="fat" placeholder="Enter fat">
+            <button onclick="addFood()">Add Food</button>
+        </div>
+        <div class="summary-section">
+            <h2>Food List</h2>
+            <ul id="food-list"></ul>
+            <h3>Total Nutrients</h3>
+            <div>
+                <label>Total Calories:</label>
+                <span id="total-calories">0</span>
+            </div>
+            <div>
+                <label>Total Protein (g):</label>
+                <span id="total-protein">0</span>
+            </div>
+            <div>
+                <label>Total Carbohydrates (g):</label>
+                <span id="total-carbs">0</span>
+            </div>
+            <div>
+                <label>Total Fat (g):</label>
+                <span id="total-fat">0</span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h3>@2024.Nutrient counter at Hemans Nutrition and wellness clinic. All rights reserved</h3>
+    </footer>
+    <script src="scripts/Nutrient counter.js"></script>
+</body>
+</html>
